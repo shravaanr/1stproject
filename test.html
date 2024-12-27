@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jura:wght@300..700&family=Orbitron:wght@400..900&display=swap"
+        rel="stylesheet">
+
+
+</head>
+<style>*{
+    text-decoration: none;
+    list-style: none;
+    padding: 0;
+    margin:0;
+}
+
+
+
+
+@keyframes fade-up {
+    0%{
+opacity: 0;
+transform: translateY(-30px) scale(0.9);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px) scale(1);
+    }
+     
+}
+body{
+    max-width:1050px;
+    margin: 0 auto;
+    background-color: #000000;
+    animation: fade-up 1.5s;
+}
+.menu-link{
+    display: flex;
+    
+    
+    height: 60px;
+    width: 40px;
+}
+.menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+}
+.menuitems{
+    display: flex;
+    align-items: center;
+   
+}
+.menuitem-link
+{
+    position:relative ;
+    display: inline-block
+   ; padding:10px 20px;
+   color:rgb(255, 255, 255);
+   text-transform: uppercase;
+   font-weight: bold;
+   transition: background-color 0.3s ease-in-out;
+border-radius: 15px;
+}
+.menuitem-link:hover{
+    background-color:#ff0303;
+    border-radius: 15px;
+}
+
+.menuitem-link::before{
+    content:'';
+    left:0;
+    top:0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity:0;
+    box-shadow: 0px 0px 20px 10px #ff0303;
+    border-radius: 15px;
+transition: opacity 0.2s -0.1s linear;
+}
+.menuitem-link:hover:before
+{
+    opacity: 0.8;
+    transition-delay: 0.01s;
+}
+@media (min-width:589px) {
+    .hamburger{
+        display: none;
+    }
+    
+}
+@media (max-width:589px) {
+    .menuitems{
+        display: none;
+    }
+    .hamburger{
+        display: flex;
+        color: white;
+        
+    }
+    .img1{
+        height: 2rem;
+        width:2rem;
+        color: white;
+        background-color: white;
+        border-radius: 70%;
+    }
+  }
+  .container{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+  
+    margin-left:48px;
+    margin-right:125px;
+    
+    
+  }
+  .hero-text{
+    color: white;
+    width: 80%;
+  }
+
+  
+  p{
+    line-height: 28px;
+    top: 28px;
+    
+   
+  }
+  .container img{
+    height :15%;
+    width: 250px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px rgb(239, 2, 2);
+  }
+
+  
+  .hero-text p{
+    margin-bottom: 80px;
+  
+}
+@keyframes typing {
+  0% { width: 0; }
+  50%, 100% { width: 100%; } /* Pauses at full text for a brief moment */
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: white; }
+}
+
+.text2 {
+  font-family: "Jura", sans-serif;
+  letter-spacing: 0px;
+  font-size: 50px;
+  line-height: 60px;
+  font-weight: 800;
+  color: #ff0000;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 4px solid; /* Creates the blinking caret */
+  width: 0;
+  animation: typing 6s steps(30, end) infinite, blink-caret 0.75s step-end infinite;
+}
+
+
+  .text2{ 
+      font-family: "Jura", sans-serif;   
+letter-spacing: 0px;
+    font-size:50px;
+ line-height: 60px;
+    font-weight: 800px;
+    color:#ff0000;
+  top:100px;
+  }
+  .text3{
+    font-size: 20px;
+    font-weight: lighter;
+  
+  }p{
+    margin-top: 10px;
+  }
+  
+.heading{
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    font-family: "Jura", sans-serif; 
+    font-size: 40px;
+    text-align: center;
+}
+.wrapper{
+    padding: 10px 10%;
+
+}
+#card-area{
+    padding:50px 0;
+}
+.box-area{
+    display:grid ;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap:100px;
+    margin-top: 50px;
+    max-width:850px;
+}
+.box{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 5px 5px 15px rgb(255, 0, 0);
+}
+.box img{
+    width:100%;
+    border-radius: 10px;
+    display: block;
+transition: transform 0.5s;
+}
+.overlay{
+    height: 0;
+    width: 100%;
+    background: linear-gradient(transparent,#f8ecec 58%);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 8px;
+    transition: height 0.5s;
+}
+.overlay h3{
+    font-weight:500;
+    margin-bottom: 5px;
+    margin-top: 80%;
+    font-family: 'poppins',sans-serif;
+    font-size: 25px;
+    letter-spacing: 0px;
+    font-weight: bolder;
+}
+.boxLhover img{
+    transform: scale(1.2);
+}
+.box:hover .overlay{
+    height: 100%;
+}
+
+
+.left1{
+  height: 100%;
+
+}
+
+
+
+
+  @media (max-width:619px){
+    .container{
+        margin-top: 10px;
+        flex-direction: column;
+        line-height: 40px;
+
+    }
+    .hero-text{
+        text-align: center;
+        width: 100%;
+        line-height: 24px;
+        
+        
+
+    }
+    .hero-text h1{
+        font-size: 3rem;
+        line-height: 200px;
+    }
+  }
+  @media (max-width:619px)
+  {
+    .hero-text h1{
+       
+        line-height: 60px;
+        
+  }
+img{
+    line-height: 40px;
+}
+.img2,h1,p{
+    margin-left:60px ;
+}
+.text3{
+    font-size: 20px;
+font-weight: lighter;
+}
+.heading{
+    flex-direction: column;
+
+}
+#card-area{
+flex-direction: column;
+}
+}
+
+
+
+
+
+
+
+
+
+</style>
+
+
+
+
+
+
+
+
+
+<body>
+    <nav class="menu">
+        <img src="airflow.svg" class="menu-link" alt="Logo">
+        <div class="hamburger">
+            <img src="hamburger.svg" class="img1">
+        </div>
+        <ul class="menuitems">
+            <li class="menuitem">
+                <a href="#" class="menuitem-link">
+                    Home
+                </a>
+            </li>
+            <li class="menuitem"></li>
+            <a href="#" class="menuitem-link">
+                About
+            </a>
+            </li>
+            <li class="menuitem"></li>
+            <a href="#" class="menuitem-link">
+                Contact
+            </a>
+            </li>
+            <li class="menuitem"></li>
+            <a href="#" class="menuitem-link">
+                Blog
+            </a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <div class="container">
+            <img src="righticon.jpg" class="img2" alt="logo" />
+            <div class="hero-text">
+                <h1 class="text2">Hello Coders !</h1>
+                <p class="text3">Look at the opportunity to explore the coding with amazing features and develop the
+                    passion.</p>
+            </div>
+        </div>
+        <p class="heading">About it </p>
+        <div id="card-area">
+            <div class="wrapper">
+                <div class="box-area">
+                    <div class="box"> <img src="left1.jpg" class="left1" alt="logo">
+                        <div class="overlay">
+                            <h3>Web development</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis tempore exercitationem
+                                sint consequuntur quidem necessitatibus consectetur dolorum cumque perspiciatis ad!</p>
+                        </div>
+                    </div>
+                    <div class="box"> 
+                        <img src="right2.jpg" class="left1"alt="logo">
+                        <div class="overlay">
+                            <h3>App Development</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis tempore exercitationem
+                                sint consequuntur quidem necessitatibus consectetur dolorum cumque perspiciatis ad!</p>
+                 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
